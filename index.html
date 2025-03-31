@@ -1,0 +1,285 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Portfolio -santhosh</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a1a, #4a4a4a);
+            color: #fff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.9);
+            padding: 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 5px solid #ff6f61;
+            position: relative;
+        }
+
+        .header-content h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            color: #ff6f61;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            text-shadow: 2px 2px 10px rgba(255, 111, 97, 0.5);
+        }
+
+        .header-content p {
+            font-size: 1.2rem;
+            color: #ffd700;
+            margin-top: 0.5rem;
+        }
+
+        .profile-picture {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 4px solid #ff6f61;
+            object-fit: cover;
+            box-shadow: 0 0 20px rgba(255, 111, 97, 0.6);
+            transition: transform 0.4s ease;
+        }
+
+        .profile-picture:hover {
+            transform: scale(1.15) rotate(5deg);
+        }
+
+        nav {
+            background: #2d2d2d;
+            padding: 1rem;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+        }
+
+        nav ul {
+            list-style: none;
+        }
+
+        nav ul li {
+            display: inline-block;
+            margin: 0 30px;
+        }
+
+        nav ul li a {
+            color: #ffd700;
+            text-decoration: none;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.3rem;
+            font-weight: 400;
+            padding: 8px 15px;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            background: #ff6f61;
+            color: #fff;
+            transform: scale(1.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 2rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2.5rem;
+            position: relative;
+            perspective: 1000px;
+        }
+
+        .section-content {
+            background: rgba(255, 255, 255, 0.95);
+            color: #333;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+            transition: transform 0.6s ease, opacity 0.4s ease;
+            transform-style: preserve-3d;
+            position: relative;
+            backface-visibility: hidden;
+        }
+
+        .section-content.hidden {
+            transform: rotateY(90deg);
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+        }
+
+        .section-content.visible {
+            transform: rotateY(0deg);
+            opacity: 1;
+        }
+
+        .section-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2rem;
+            color: #ff6f61;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #ffd700;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-content p,
+        .section-content ul {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        ul {
+            list-style-type: square;
+            padding-left: 25px;
+            margin-top: 0.8rem;
+        }
+
+        .download-button {
+            display: inline-block;
+            background: #ff6f61;
+            color: #fff;
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            margin-top: 1.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .download-button:hover {
+            background: #ffd700;
+            color: #2d2d2d;
+            transform: scale(1.1);
+        }
+
+        footer {
+            background: #2d2d2d;
+            padding: 1.5rem;
+            text-align: center;
+            font-size: 1rem;
+            color: #ffd700;
+            position: relative;
+            width: 100%;
+        }
+
+        .full-width {
+            grid-column: 1 / -1;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>santhosh</h1>
+            <p>I'm a B.Sc Computer Science Student</p>
+        </div>
+        <img src="santhosh.jpg" alt="santhosh Picture" class="profile-picture">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#education">Education</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#resume">Resume</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about" class="section-content visible">
+            <h2>About Me</h2>
+            <p>I am an energetic and passionate individual who loves video editing, playing badminton, and diving into
+                Bible books during my downtime. I’m committed to my college studies, always excited to explore new
+                concepts, and aim to maintain a perfect balance between my academic pursuits, hobbies, and staying
+                active.</p>
+        </section>
+
+        <section id="education" class="section-content hidden">
+            <h2>Education</h2>
+            <p>Dr Ambedkar Govt College</p>
+        </section>
+
+        <section id="skills" class="section-content hidden">
+            <h2>Skills</h2>
+            <ul>
+                <li>Python</li>
+                <li>Java</li>
+                <li>CSS</li>
+                <li>PHP</li>
+                <li>JavaScript</li>
+                <li>HTML</li>
+            </ul>
+        </section>
+
+        <section id="projects" class="section-content hidden">
+            <h2>Projects</h2>
+            <ul>
+                <li><a href="#">Digital Portfolio</a></li>
+            </ul>
+        </section>
+
+        <section id="resume" class="section-content hidden full-width">
+            <h2>Resume</h2>
+            <center>
+                <a href="santhosh.pdf" target="_blank" class="download-button">Download CV</a>
+            </center>
+        </section>
+    </div>
+
+    <footer>
+        <p>© 2025 santhosh</p>
+    </footer>
+
+    <script>
+        const sections = document.querySelectorAll('.section-content');
+        const navLinks = document.querySelectorAll('nav a');
+
+        function showSection(targetId) {
+            sections.forEach(section => {
+                if (section.id === targetId) {
+                    section.classList.remove('hidden');
+                    section.classList.add('visible');
+                } else {
+                    section.classList.remove('visible');
+                    section.classList.add('hidden');
+                }
+            });
+        }
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                showSection(targetId);
+            });
+        });
+
+        // Initially show only the "About" section
+        showSection('about');
+    </script>
+</body>
+
+</html>
